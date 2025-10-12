@@ -37,7 +37,7 @@ const Navbar = () => {
             {/* Logo Wrapper: Responsive sizing on p, w, h using sm: prefix */}
             <div className="relative mr-2 sm:mr-3 bg-white p-1.5 sm:p-2 rounded-xl shadow-lg transition-all duration-300 group-hover:shadow-blue-500/50">
               <img 
-                src={'logo}
+                src={'logo'}
                 alt="Fielduo Logo"
                 // Logo Image: Uses sm: for slightly larger size on tablets/desktops
                 className="w-6 h-6 sm:w-8 sm:h-8 transition-transform duration-300 group-hover:rotate-12" 
@@ -123,5 +123,6 @@ const Navbar = () => {
 
 
 export default Navbar;
+
 
 
