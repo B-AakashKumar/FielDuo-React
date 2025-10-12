@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* Container: Max width ensures content doesn't stretch too wide on desktops */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
-          <a href="/" className="flex items-center group" aria-label="Home">
+          <a href="#home" className="flex items-center group" aria-label="Home">
             
             {/* Logo Wrapper: Responsive sizing on p, w, h using sm: prefix */}
             <div className="relative mr-2 sm:mr-3 bg-white p-1.5 sm:p-2 rounded-xl shadow-lg transition-all duration-300 group-hover:shadow-blue-500/50">
@@ -108,7 +108,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="/Contact" 
+              href="#Contact" 
               className="block w-full mt-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 text-center shadow-md hover:shadow-lg"
               onClick={() => setIsOpen(false)} // Close menu on contact click
             >
@@ -123,6 +123,7 @@ const Navbar = () => {
 
 
 export default Navbar;
+
 
 
 
