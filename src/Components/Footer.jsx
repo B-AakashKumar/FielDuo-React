@@ -10,7 +10,7 @@ const Footer = () => {
           
           {/* 1. Company Info & Socials (Col 1) */}
           <div>
-            <a href="#home" className="flex items-center group mb-4">
+            <a href="#" className="flex items-center group mb-4">
               <span className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
                 Fielduo
               </span>
@@ -132,9 +132,9 @@ const Footer = () => {
         <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Fielduo. All rights reserved.</p>
           <div className="flex space-x-6">
-            <a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Privacy Policy</a>
-            <a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Terms of Service</a>
-            <a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Cookie Policy</a>
+            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Privacy Policy</a>
+            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Terms of Service</a>
+            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-sm">Cookie Policy</a>
           </div>
         </div>
       </div>
@@ -144,3 +144,4 @@ const Footer = () => {
 
 
 export default Footer;
+
