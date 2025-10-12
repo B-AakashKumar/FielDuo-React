@@ -1207,13 +1207,12 @@ export default function HomeContent() {
 
             {/* --- Main Content Container --- */}
             <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pt-32 sm:pb-12 md:pt-32 md:pb-12"> 
-              <section id='Home'>
                 <HeroSection 
                     currentDate={currentDate}
                     isHovering={isHovering}
                     setIsHovering={setIsHovering}
                     createRipple={createRipple}
-                /> </section>
+                />
                 <FeaturesSection />
                 <WhyChooseFielduoSection />
                 <section id='Pricing'><Pricing /></section>
@@ -1300,3 +1299,4 @@ export default function HomeContent() {
     );
 
 }
+
