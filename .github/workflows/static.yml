@@ -1,23 +1,67 @@
-# A standard template for deploying React on GitHub Actions
+name: Deploy React Project to GitHub Pages
+
+on:
+  # Runs on pushes targeting the 'main' branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  # ... other setup steps
+  # 1. Build Job: Installs dependencies, runs 'npm run build', and prepares the artifact.
   build:
     runs-on: ubuntu-latest
     steps:
-      # ... checkout code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Setup Node.js Environment
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use a recent LTS version
+          node-version: '20' # Use a stable LTS version of Node
 
-      - name: Install dependencies
-        run: npm install 
+      # Install project dependencies
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Build project
-        run: npm run build # This creates the 'build' directory
+      # Run the React build command to create the 'build' folder
+      - name: Build React App
+        run: npm run build
 
-      - name: Upload Pages artifact
+      # Configure GitHub Pages environment
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload the 'build' folder as a deployment artifact
+      - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build' # Tells the action to deploy the contents of the 'build' folder
-# ... deployment step
+          # IMPORTANT: Point to the output directory of your React build
+          path: './build'
+
+  # 2. Deploy Job: Takes the uploaded artifact and publishes it to GitHub Pages.
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    # Needs the 'build' job to complete successfully first
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
