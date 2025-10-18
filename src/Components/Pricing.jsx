@@ -7,7 +7,7 @@ const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
   const [activeTab, setActiveTab] = useState('pricing');
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState('USD');
+  // Removed: [selectedCurrency, setSelectedCurrency] state
   
   useEffect(() => {
     // Initialize AOS
@@ -21,19 +21,14 @@ const Pricing = () => {
     setIsVisible(true);
   }, []);
 
-  const currencies = [
-    { code: 'USD', symbol: '$', name: 'US Dollar' },
-    { code: 'EUR', symbol: '€', name: 'Euro' },
-    { code: 'GBP', symbol: '£', name: 'British Pound' },
-    { code: 'INR', symbol: '₹', name: 'Indian Rupee' },
-    { code: 'USD', symbol: '$', name: 'US Dollar' }
-  ];
+  // Removed: currencies array
 
   const pricingTiers = [
     {
       name: "STARTER PLAN",
-      monthlyPrice: { USD: "$36", EUR: "€31", GBP: "£27", INR: "₹3,182" },
-      yearlyPrice: { USD: "$30.00", EUR: "€25.44", GBP: "£22.20", INR: "₹2,652" },
+      // Updated: Price is now a simple string, only USD value is kept
+      monthlyPrice: "$36", 
+      yearlyPrice: "$30.00", 
       savings: "79% cheaper than Salesforce",
       description: "Perfect for Small Businesses (1-5 Technicians)",
       features: [
@@ -53,8 +48,9 @@ const Pricing = () => {
     },
     {
       name: "PROFESSIONAL PLAN",
-      monthlyPrice: { USD: "$72", EUR: "€61", GBP: "£53", INR: "₹6,365" },
-      yearlyPrice: { USD: "$60.00", EUR: "€50.88", GBP: "£44.40", INR: "₹5,304" },
+      // Updated: Price is now a simple string, only USD value is kept
+      monthlyPrice: "$72", 
+      yearlyPrice: "$60.00", 
       savings: "59% cheaper than Salesforce",
       description: "Perfect for 6-15 Technicians",
       features: [
@@ -72,8 +68,9 @@ const Pricing = () => {
     },
     {
       name: "ENTERPRISE PLAN",
-      monthlyPrice: { USD: "$120", EUR: "€102", GBP: "£89", INR: "₹10,608" },
-      yearlyPrice: { USD: "$100.00", EUR: "€84.80", GBP: "£74.00", INR: "₹8,840" },
+      // Updated: Price is now a simple string, only USD value is kept
+      monthlyPrice: "$120", 
+      yearlyPrice: "$100.00", 
       savings: "31% cheaper than Salesforce",
       description: "Perfect for 16+ Technicians",
       features: [
@@ -115,9 +112,9 @@ const Pricing = () => {
     { scenario: "Enterprise Service Operation (25 technicians)", fielduo: "$120/month", alternative: "$4,375/month ($175 × 25)", monthlySavings: "$4,255", annualSavings: "$51,060", threeYearROI: "$153,180" }
   ];
 
-  const getCurrentPrice = (plan: any) => {
-    const priceObj = billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice;
-    return priceObj[selectedCurrency] || priceObj.USD;
+  // Simplified: Function now only returns the monthly or yearly price string directly
+  const getCurrentPrice = (plan) => {
+    return billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice;
   };
 
   return (
@@ -218,7 +215,8 @@ const Pricing = () => {
                   <div className="flex justify-between items-center p-4 bg-gray-850 bg-opacity-50 rounded-xl backdrop-blur-sm">
                     <span className="text-gray-300">Starter Plan</span>
                     <div className="text-right">
-                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[0].monthlyPrice.USD : pricingTiers[0].yearlyPrice.USD}</span>
+                      {/* Updated: Access price directly from the tier object */}
+                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[0].monthlyPrice : pricingTiers[0].yearlyPrice}</span>
                       <span className="text-gray-400 text-sm">/month</span>
                       {billingCycle === 'yearly' && <div className="text-gray-400 text-xs">billed annually</div>}
                     </div>
@@ -226,7 +224,8 @@ const Pricing = () => {
                   <div className="flex justify-between items-center p-4 bg-gray-850 bg-opacity-50 rounded-xl backdrop-blur-sm">
                     <span className="text-gray-300">Professional Plan</span>
                     <div className="text-right">
-                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[1].monthlyPrice.USD : pricingTiers[1].yearlyPrice.USD}</span>
+                      {/* Updated: Access price directly from the tier object */}
+                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[1].monthlyPrice : pricingTiers[1].yearlyPrice}</span>
                       <span className="text-gray-400 text-sm">/month</span>
                       {billingCycle === 'yearly' && <div className="text-gray-400 text-xs">billed annually</div>}
                     </div>
@@ -234,7 +233,8 @@ const Pricing = () => {
                   <div className="flex justify-between items-center p-4 bg-gray-850 bg-opacity-50 rounded-xl backdrop-blur-sm">
                     <span className="text-gray-300">Enterprise Plan</span>
                     <div className="text-right">
-                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[2].monthlyPrice.USD : pricingTiers[2].yearlyPrice.USD}</span>
+                      {/* Updated: Access price directly from the tier object */}
+                      <span className="font-bold text-xl">{billingCycle === 'monthly' ? pricingTiers[2].monthlyPrice : pricingTiers[2].yearlyPrice}</span>
                       <span className="text-gray-400 text-sm">/month</span>
                       {billingCycle === 'yearly' && <div className="text-gray-400 text-xs">billed annually</div>}
                     </div>
@@ -265,24 +265,7 @@ const Pricing = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">Choose the plan that fits your business needs</p>
           </div>
 
-          {/* Currency Selector */}
-          <div className="flex justify-center mb-8" data-aos="fade-up">
-            <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-lg p-2 border border-gray-700">
-              <label htmlFor="currency-select" className="text-sm text-gray-400 mr-2">Select Currency:</label>
-              <select 
-                id="currency-select"
-                value={selectedCurrency}
-                onChange={(e) => setSelectedCurrency(e.target.value)}
-                className="bg-gray-900 border border-gray-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {currencies.map(currency => (
-                  <option key={currency.code} value={currency.code}>
-                    {currency.code} 
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+          {/* Removed: Currency Selector section */}
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pricingTiers.map((plan, index) => (
@@ -302,6 +285,7 @@ const Pricing = () => {
                 {/* Currency Display */}
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center mb-2">
+                    {/* Updated: Using simplified getCurrentPrice */}
                     <span className="text-4xl font-bold">{getCurrentPrice(plan)}</span>
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
@@ -310,8 +294,9 @@ const Pricing = () => {
                       Save 17% with annual billing
                     </div>
                   )}
+                  {/* Updated: Hardcoded currency to USD */}
                   <div className="text-gray-400 text-sm mt-1">
-                    {selectedCurrency}
+                    USD
                   </div>
                 </div>
                 
