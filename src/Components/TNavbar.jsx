@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* Container: Max width ensures content doesn't stretch too wide on desktops */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
-          <a href="#" className="flex items-center group" aria-label="Home">
+          <a href="/" className="flex items-center group" aria-label="Home">
             
             {/* Logo Wrapper: Responsive sizing on p, w, h using sm: prefix */}
             <div className="relative mr-2 sm:mr-3 bg-white p-1.5 sm:p-2 rounded-xl shadow-lg transition-all duration-300 group-hover:shadow-blue-500/50">
