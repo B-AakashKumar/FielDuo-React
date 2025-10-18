@@ -129,28 +129,6 @@ const INDUSTRIES = [
     { name: "Pest Control", description: "Effective pest solutions" }
 ];
 
-// Team data for About section
-const TEAM_DATA = [
-    {
-        name: "Hari",
-        role: "CEO & Co-founder",
-        description: "Brings 12 years of product leadership and a passion for operational excellence.",
-        initials: "H"
-    },
-    {
-        name: "Kiruthiga",
-        role: "CTO & Co-founder", 
-        description: "A seasoned software architect with deep expertise in mobile and cloud technologies.",
-        initials: "K"
-    },
-    {
-        name: "Abavanan Mani",
-        role: "CGO - Chief Growth Officer",
-        description: "Strategic leader with a proven track record in driving business growth and market expansion.",
-        initials: "AM"
-    }
-];
-
 // --- Helper Function (Orbs) ---
 const generateOrbs = (count = 6) => {
     return [...Array(count)].map((_, i) => ({
@@ -427,8 +405,7 @@ const WhyChooseFielduoSection = () => {
                         </div>
                     </div>
                 )}
-{/* 
-                <div className="text-center pt-8">
+{/* <div className="text-center pt-8">
                     <a href="/signup" className="group relative px-10 py-3 sm:px-12 sm:py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-bold text-base overflow-hidden text-white transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 inline-block w-full sm:w-auto focus:outline-none focus:ring-4 focus:ring-indigo-500/50">
                         Get Started Today &rarr;
                     </a>
@@ -595,7 +572,6 @@ const FielduoVsCompetitorsSection = () => {
                                     <h3 className="font-bold text-lg text-white">{item.differentiator}</h3>
                                 </div>
                             </div>
-                            
                             {/* Fielduo Advantage */}
                             <div className="flex items-start mb-4 md:mb-0 group">
                                 <span className="text-green-400 mr-3 text-xl mt-1 group-hover:scale-110 transition-transform">{item.fielduoIcon}</span>
@@ -604,7 +580,6 @@ const FielduoVsCompetitorsSection = () => {
                                     <p className="text-gray-300">{item.fielduo}</p>
                                 </div>
                             </div>
-                            
                             {/* Competitors */}
                             <div className="flex items-start group">
                                 <span className="text-yellow-400 mr-3 text-xl mt-1 group-hover:scale-110 transition-transform">{item.competitorIcon}</span>
@@ -618,11 +593,7 @@ const FielduoVsCompetitorsSection = () => {
                 </div>
                 
                 {/* Key Takeaways */}
-                <div 
-                    className="mt-16 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-gray-800 shadow-xl"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                >
+                <div className="mt-16 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-gray-800 shadow-xl" data-aos="fade-up" data-aos-delay="300" >
                     <h3 className="text-2xl font-bold mb-6 text-center">Why Choose Fielduo?</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="flex items-start p-4 bg-gray-900 bg-opacity-50 rounded-xl hover:bg-gray-800 transition-all duration-300 group" data-aos="fade-right" data-aos-delay="350">
@@ -631,34 +602,21 @@ const FielduoVsCompetitorsSection = () => {
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <p className="text-gray-300">Superior value with no hidden costs or feature restrictions</p>
+                            <div>
+                                <h4 className="font-semibold text-white mb-1">Unbeatable Value</h4>
+                                <p className="text-gray-300">Get the best features without paying a premium price</p>
+                            </div>
                         </div>
-                        
                         <div className="flex items-start p-4 bg-gray-900 bg-opacity-50 rounded-xl hover:bg-gray-800 transition-all duration-300 group" data-aos="fade-left" data-aos-delay="400">
                             <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.75l.5-1.5h4l.5 1.5H16l-1-3h-1.5l1-3h-1.5l-1 3H10.5l-1 3H8l1.5-4.5h3l1.5 4.5H16z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <p className="text-gray-300">Advanced AI features that are actually easy to use</p>
-                        </div>
-                        
-                        <div className="flex items-start p-4 bg-gray-900 bg-opacity-50 rounded-xl hover:bg-gray-800 transition-all duration-300 group" data-aos="fade-right" data-aos-delay="450">
-                            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                </svg>
+                            <div>
+                                <h4 className="font-semibold text-white mb-1">Seamless Mobile Experience</h4>
+                                <p className="text-gray-300">Reliable offline functionality that just works</p>
                             </div>
-                            <p className="text-gray-300">Complete feature set with no need for expensive add-ons</p>
-                        </div>
-                        
-                        <div className="flex items-start p-4 bg-gray-900 bg-opacity-50 rounded-xl hover:bg-gray-800 transition-all duration-300 group" data-aos="fade-left" data-aos-delay="500">
-                            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                </svg>
-                            </div>
-                            <p className="text-gray-300">Reliable offline functionality that just works</p>
                         </div>
                     </div>
                 </div>
@@ -669,7 +627,6 @@ const FielduoVsCompetitorsSection = () => {
 
 // --- Child Component: AboutFielduoSection ---
 const AboutFielduoSection = () => {
-    
     return (
         <section className="py-20 px-4 relative overflow-hidden">
             {/* Background decoration */}
@@ -677,19 +634,14 @@ const AboutFielduoSection = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500 rounded-full filter blur-3xl opacity-10"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full filter blur-3xl opacity-10"></div>
             </div>
-            
             <div className="container mx-auto max-w-6xl relative z-10">
                 {/* Header Section */}
                 <div className="text-center mb-16" data-aos="fade-up">
                     <div className="inline-block mb-4 px-3 py-1 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-full border border-indigo-500/30">
                         <span className="text-indigo-300 font-medium text-xs sm:text-sm">ABOUT US</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-                        About Fielduo
-                    </h2>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Revolutionizing field service management with innovative technology
-                    </p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500"> About Fielduo </h2>
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Revolutionizing field service management with innovative technology </p>
                 </div>
 
                 {/* Who We Are Section */}
@@ -699,29 +651,27 @@ const AboutFielduoSection = () => {
                             <div className="inline-block mb-4">
                                 <span className="text-xs font-semibold px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full">WHO WE ARE</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Empowering Field Service Excellence</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                                A Company <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Driven by Efficiency</span>
+                            </h2>
                             <p className="text-gray-300 text-lg leading-relaxed">
-                                At Fielduo, we empower businesses with seamless field-service management and real-time operational insights. Founded in 2025 in USA by Hari (CEO) and Kiruthiga (CTO), our startup brings together passionate technologists and industry experts dedicated to transforming field operations.
+                                We are Fielduo—a team of field service veterans and software engineers dedicated to eliminating operational chaos. We know that every minute a technician spends on paperwork or driving inefficient routes directly impacts your bottom line.
+                            </p>
+                            <p className="text-gray-300 text-lg leading-relaxed mt-4">
+                                Our platform is built on a simple philosophy: **Automation should be invisible, and data should be immediate.** We provide the tools for your team to focus on the work, not the workflow.
                             </p>
                         </div>
-{/*                         
-                        <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-right" data-aos-delay="100">
-                            <button className="group flex items-center justify-between px-6 py-4 bg-gray-900 bg-opacity-70 backdrop-blur-sm hover:bg-gray-800 rounded-xl border border-gray-800 transition-all duration-300 transform hover:-translate-y-1">
-                                <span className="text-indigo-400 group-hover:text-indigo-300 font-medium">Field Service Excellence</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-3 text-indigo-400 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                            </button>
-                            
-                            <button className="group flex items-center justify-between px-6 py-4 bg-gray-900 bg-opacity-70 backdrop-blur-sm hover:bg-gray-800 rounded-xl border border-gray-800 transition-all duration-300 transform hover:-translate-y-1">
-                                <span className="text-indigo-400 group-hover:text-indigo-300 font-medium">Innovation Journey</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-3 text-indigo-400 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
+                        {/* <div className="mt-8" data-aos="fade-right" data-aos-delay="200">
+                            <button className="group relative px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-bold text-base overflow-hidden text-white transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 inline-block focus:outline-none focus:ring-4 focus:ring-indigo-500/50">
+                                <span className="relative z-10 flex items-center">
+                                    Our Manifesto
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </span>
                             </button>
                         </div> */}
                     </div>
-                    
                     <div className="relative" data-aos="fade-left">
                         <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-20"></div>
                         <div className="relative bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-2xl p-10 border border-gray-800 h-full">
@@ -735,7 +685,6 @@ const AboutFielduoSection = () => {
                             <p className="text-gray-300 leading-relaxed">
                                 Today, we continue to iterate and grow, guided by customer feedback and a commitment to simplicity.
                             </p>
-                            
                             <div className="flex items-center mt-8 pt-6 border-t border-gray-800">
                                 <div className="flex -space-x-3 mr-4">
                                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-700 flex items-center justify-center text-white font-bold">H</div>
@@ -756,32 +705,40 @@ const AboutFielduoSection = () => {
                         <div className="inline-block mb-4" data-aos="fade-down">
                             <span className="text-xs font-semibold px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full">OUR DIFFERENCE</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down" data-aos-delay="100">What Sets Us Apart</h2>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">
-                            Discover the unique advantages that make Fielduo the preferred choice for field service management
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                            The Fielduo <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Advantage</span>
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                            Focus on what truly moves the needle for field service businesses.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                         {/* Feature 1 */}
+                        <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in">
+                            <div className="text-4xl mb-6">🧠</div>
+                            <h3 className="text-2xl font-bold mb-4">AI-Driven Scheduling</h3>
+                            <p className="text-gray-300 mb-6 leading-relaxed">
+                                Our proprietary AI engine automatically optimizes schedules and routes in real-time, cutting down planning time from hours to seconds and maximizing job completion rates.
+                            </p>
+                        </div>
+                        {/* Feature 2 */}
                         <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in" data-aos-delay="100">
                             <div className="text-4xl mb-6">📱</div>
-                            <h3 className="text-2xl font-bold mb-4">User-Centric Design</h3>
+                            <h3 className="text-2xl font-bold mb-4">Offline-First Mobile</h3>
                             <p className="text-gray-300 mb-6 leading-relaxed">
-                                Every feature is crafted for field technicians—minimizing taps, supporting offline use, and delivering clear task guidance.
+                                Give your field team a mobile app that works 100% reliably even in remote locations. Everything syncs instantly once connectivity is restored.
                             </p>
                         </div>
-                        
-                        {/* Feature 2 */}
-                        <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="text-4xl mb-6">📊</div>
-                            <h3 className="text-2xl font-bold mb-4">Actionable Analytics</h3>
-                            <p className="text-gray-300 mb-6 leading-relaxed">
-                                Real-time dashboards highlight job progress, resource utilization, and customer satisfaction, empowering managers to make data-driven decisions instantly.
-                            </p>
-                        </div>
-                        
                         {/* Feature 3 */}
+                        <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="text-4xl mb-6">👥</div>
+                            <h3 className="text-2xl font-bold mb-4">Built for Collaboration</h3>
+                            <p className="text-gray-300 mb-6 leading-relaxed">
+                                Seamless communication between the office, field technicians, and customers ensures everyone is aligned, reducing status calls and increasing customer satisfaction.
+                            </p>
+                        </div>
+                        {/* Feature 4 */}
                         <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in" data-aos-delay="300">
                             <div className="text-4xl mb-6">🔗</div>
                             <h3 className="text-2xl font-bold mb-4">Easy Integration</h3>
@@ -789,8 +746,7 @@ const AboutFielduoSection = () => {
                                 Our lightweight API and pre-built connectors to popular ERP and CRM platforms mean rapid deployment with minimal IT overhead.
                             </p>
                         </div>
-
-                        {/* Feature 4 */}
+                        {/* Feature 5 */}
                         <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="zoom-in" data-aos-delay="400">
                             <div className="text-4xl mb-6">🔐</div>
                             <h3 className="text-2xl font-bold mb-4">Scalable & Secure</h3>
@@ -798,8 +754,7 @@ const AboutFielduoSection = () => {
                                 Built on a modern cloud-native stack, Fielduo scales with your team. Role-based access controls and ISO-aligned security practices protect your data from end to end.
                             </p>
                         </div>
-
-                        {/* Feature 5 */}
+                        {/* Feature 6 */}
                         <div className="group bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20 md:col-span-2 lg:col-span-1 lg:mx-auto" data-aos="zoom-in" data-aos-delay="500">
                             <div className="text-4xl mb-6">🤝</div>
                             <h3 className="text-2xl font-bold mb-4">Dedicated Support</h3>
@@ -815,32 +770,32 @@ const AboutFielduoSection = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
                         {/* Vision */}
                         <div className="group bg-black bg-opacity-50 backdrop-blur-sm rounded-2xl p-10 border border-gray-800 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="fade-right">
-                            <div className="text-5xl mb-6">🌍</div>
-                            <h3 className="text-3xl font-bold mb-6">Our Vision</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed">
-                                To revolutionise field-service operations worldwide by delivering an intuitive, data-driven platform that empowers organisations to achieve peak efficiency, exceptional customer satisfaction, and sustainable growth.
+                            <div className="flex items-center mb-6">
+                                <div className="h-0.5 w-10 bg-purple-500 mr-4"></div>
+                                <h3 className="text-2xl font-bold text-purple-400">Our Vision</h3>
+                            </div>
+                            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                                To be the world's most intuitive and intelligent platform for field service management, powering millions of successful service calls every day.
                             </p>
+                            <div className="flex items-center justify-center mt-8 p-4 bg-gray-900/50 rounded-xl">
+                                <span className="text-indigo-400 font-medium">#FutureOfFieldService</span>
+                            </div>
                         </div>
-                        
+
                         {/* Mission */}
                         <div className="group bg-black bg-opacity-50 backdrop-blur-sm rounded-2xl p-10 border border-gray-800 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20" data-aos="fade-left">
-                            <div className="text-5xl mb-6">🚀</div>
-                            <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
-                            <p className="text-gray-300 mb-6 text-lg">
-                                Fielduo exists to simplify and enhance every aspect of field-service management. We will:
-                            </p>
-                            <ul className="text-gray-300 space-y-4">
+                            <div className="flex items-center mb-6">
+                                <div className="h-0.5 w-10 bg-indigo-500 mr-4"></div>
+                                <h3 className="text-2xl font-bold text-indigo-400">Our Mission</h3>
+                            </div>
+                            <ul className="space-y-4 text-gray-300">
                                 <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
                                     <span className="text-indigo-400 mr-3 text-xl">•</span>
-                                    <span>Develop a user-first mobile and web platform that streamlines job scheduling, reporting, and communication</span>
+                                    <span>Simplify complex field operations through powerful, accessible mobile and AI technology</span>
                                 </li>
                                 <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
                                     <span className="text-indigo-400 mr-3 text-xl">•</span>
-                                    <span>Harness AI-powered analytics to deliver real-time insights and predictive maintenance alerts</span>
-                                </li>
-                                <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
-                                    <span className="text-indigo-400 mr-3 text-xl">•</span>
-                                    <span>Ensure seamless integration with existing business systems through open APIs and pre-built connectors</span>
+                                    <span>Enable effortless data flow and integration with existing business systems through open APIs and pre-built connectors</span>
                                 </li>
                                 <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
                                     <span className="text-indigo-400 mr-3 text-xl">•</span>
@@ -855,66 +810,23 @@ const AboutFielduoSection = () => {
                     </div>
                 </div>
 
-                {/* Our Team Section - Fixed Transitions & Better Visibility */}
-                <div className="mb-20">
-                    <div className="text-center mb-16">
-                        <div className="inline-block mb-4" data-aos="fade-down">
-                            <span className="text-xs font-semibold px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full">OUR TEAM</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down" data-aos-delay="100">Meet Our Team</h2>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">
-                            Passionate individuals dedicated to transforming field service management
-                        </p>
-                    </div>
-                    
-                    {/* Team Content - Now only Leadership content, simplifying the structure */}
-                    <div className="transition-all duration-300 ease-in-out">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-                            {TEAM_DATA.map((member, index) => (
-                                <div 
-                                    key={index}
-                                    className="group bg-gray-900/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-indigo-500 text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20" 
-                                    data-aos="fade-up" 
-                                    data-aos-delay={300 + index * 100}
-                                >
-                                    <div className="relative w-24 h-24 rounded-full mx-auto mb-4 group-hover:scale-105 transition-transform duration-200 overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
-                                        <span className="text-white text-2xl font-bold">{member.initials}</span>
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                                    </div>
-                                    <h3 className="text-xl font-bold mb-2 text-white">{member.name}</h3>
-                                    <p className="text-indigo-400 mb-3 text-base font-semibold">{member.role}</p>
-                                    <p className="text-gray-300 leading-relaxed text-sm mb-4">
-                                        {member.description}
-                                    </p>
-                                    {/* <div className="mt-4 pt-4 border-t border-gray-700">
-                                        <button className="group flex items-center justify-center text-indigo-400 hover:text-indigo-300 font-medium text-sm mx-auto transition-all duration-200">
-                                            Learn more
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                            </svg>
-                                        </button>
-                                    </div> */}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-{/* 
-        
-                <div className="text-center pt-8">
-                    <a href="#about" className="group relative px-10 py-3 sm:px-12 sm:py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-bold text-base overflow-hidden text-white transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 inline-block w-full sm:w-auto focus:outline-none focus:ring-4 focus:ring-indigo-500/50">
-                        Learn More About Us &rarr;
-                    </a>
-                </div> */}
+                {/* The "Our Team Section" block has been removed here */}
+
             </div>
         </section>
     );
 };
 
-// --- NEW Child Component: ContactSection ---
-const ContactSection = () => {
-    
-    // Data adapted from Contact.tsx for consistency
+// --- Child Component: ContactUsSection ---
+const ContactUsSection = () => {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        company: '',
+        message: ''
+    });
+    const [submitted, setSubmitted] = useState(null);
+
     const contactDetails = [
         { 
             icon: (
@@ -938,326 +850,269 @@ const ContactSection = () => {
         { 
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C7.82 21 3 16.18 3 10V5z" />
                 </svg>
             ), 
-            title: "Sales", 
-            lines: ["US: +1 (415) 915 7065", "IND: +91 962 962 7092"] 
-        },
-        { 
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-            ), 
-            title: "Support", 
-            lines: ["+1 (415) 200 5240"] 
-        },
+            title: "Call Us", 
+            lines: ["+1 (888) 555-1212"] 
+        }
     ];
 
-    const [submitting, setSubmitting] = useState(false);
-    const [submitted, setSubmitted] = useState(null);
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    // Dummy onSubmit function for display component
     const onSubmit = (e) => {
         e.preventDefault();
-        setSubmitting(true);
-        // Simulate API call delay
-        setTimeout(() => {
-            setSubmitting(false);
-            // Simulate success
-            setSubmitted({ ok: true, message: 'Thank you for your message! We will be in touch shortly.' });
-            e.target.reset(); // Clear the form
-        }, 1500);
-    }
+        
+        // This is where a real form submission would happen (e.g., fetch request to an API)
+        console.log("Form Submitted:", formData);
 
+        // Simulate API response
+        if (formData.fullName && formData.email && formData.message) {
+            setSubmitted({
+                ok: true,
+                message: "Thank you for reaching out! We've received your message and will be in touch shortly."
+            });
+            // Clear form
+            setFormData({ fullName: '', email: '', company: '', message: '' });
+        } else {
+            setSubmitted({
+                ok: false,
+                message: "Please fill in all required fields (Name, Email, Message) before submitting."
+            });
+        }
+
+        // Clear status message after a few seconds
+        setTimeout(() => setSubmitted(null), 5000);
+    };
 
     return (
         <>
-            <section className="relative py-20 md:py-32 px-4 overflow-hidden">
-                <div className="container mx-auto max-w-6xl relative z-10">
-                    {/* Header Section */}
-                    <div className="text-center mb-16" data-aos="fade-up">
-                        <div className="inline-block mb-4 px-3 py-1 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-full border border-indigo-500/30">
-                            <span className="text-indigo-300 font-medium text-xs sm:text-sm">CONTACT US</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-                            Let's Talk About Your Project
-                        </h2>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                            Whether you have a question or need a personalized demo, our team is ready to help.
-                        </p>
+        <section id='Contact' className="py-20 md:py-32 px-4 relative overflow-hidden">
+            <div className="container mx-auto max-w-6xl relative z-10">
+                {/* Header Section */}
+                <div className="text-center mb-16" data-aos="fade-up">
+                    <div className="inline-block mb-4 px-3 py-1 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-full border border-indigo-500/30">
+                        <span className="text-indigo-300 font-medium text-xs sm:text-sm">GET IN TOUCH</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
+                        Start Your Next Project
+                    </h2>
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Whether you have a question or need a personalized demo, our team is ready to help.
+                    </p>
+                </div>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Contact Information Cards */}
+                    <div className="space-y-6" data-aos="fade-right">
+                        <h3 className="text-2xl font-bold text-white mb-6">Reach Out Directly</h3>
+                        {contactDetails.map((item, index) => (
+                            <div key={index} className="flex items-start p-6 bg-gray-900/70 backdrop-blur-sm rounded-xl border border-gray-800 transition-all duration-300 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20" >
+                                <div className="p-3 mr-4 bg-indigo-900/50 rounded-full flex-shrink-0">
+                                    {item.icon}
+                                </div>
+                                <div>
+                                    <h4 className="text-lg font-semibold text-white mb-1">{item.title}</h4>
+                                    {item.lines.map((line, lineIndex) => (
+                                        <p key={lineIndex} className="text-gray-300 text-sm">
+                                            {line}
+                                        </p>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Contact Information Cards */}
-                        <div className="space-y-6" data-aos="fade-right">
-                            <h3 className="text-2xl font-bold text-white mb-6">Reach Out Directly</h3>
-                            {contactDetails.map((item, index) => (
-                                <div 
-                                    key={index}
-                                    className="flex items-start p-6 bg-gray-900/70 backdrop-blur-sm rounded-xl border border-gray-800 transition-all duration-300 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20"
+                    {/* Contact Form */}
+                    <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-8 md:p-10 border border-gray-800 shadow-2xl" data-aos="fade-left">
+                        <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
+                        {submitted && (
+                            <div className={`p-4 mb-4 rounded-lg text-sm font-medium ${submitted.ok ? 'bg-green-600/30 text-green-300 border border-green-500' : 'bg-red-600/30 text-red-300 border border-red-500'}`}>
+                                {submitted.message}
+                            </div>
+                        )}
+                        <form className="space-y-6" onSubmit={onSubmit}>
+                            <div>
+                                <label htmlFor="full-name" className="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    id="full-name" 
+                                    name="fullName" 
+                                    required 
+                                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200" 
+                                    placeholder="Jane Doe" 
+                                    value={formData.fullName}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200" 
+                                    placeholder="jane.doe@company.com" 
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">Company Name (Optional)</label>
+                                <input 
+                                    type="text" 
+                                    id="company" 
+                                    name="company" 
+                                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200" 
+                                    placeholder="Field Service Co." 
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">How can we help?</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    required 
+                                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200" 
+                                    placeholder="I'd like a demo of the AI scheduling feature..."
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                ></textarea>
+                            </div>
+                            <div>
+                                <button
+                                    type="submit"
+                                    className="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl font-bold text-lg text-white transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-indigo-500/50"
                                 >
-                                    <div className="p-3 mr-4 bg-indigo-900/50 rounded-full flex-shrink-0">
-                                        {item.icon}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg font-semibold text-white mb-1">{item.title}</h4>
-                                        {item.lines.map((line, lineIndex) => (
-                                            <p key={lineIndex} className="text-gray-300 text-sm">
-                                                {line}
-                                            </p>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Contact Form */}
-                        <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-8 md:p-10 border border-gray-800 shadow-2xl" data-aos="fade-left">
-                            <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
-                            
-                            {submitted && (
-                                <div className={`p-4 mb-4 rounded-lg text-sm font-medium ${submitted.ok ? 'bg-green-600/30 text-green-300 border border-green-500' : 'bg-red-600/30 text-red-300 border border-red-500'}`}>
-                                    {submitted.message}
-                                </div>
-                            )}
-
-                            <form className="space-y-6" onSubmit={onSubmit}>
-                                <div>
-                                    <label htmlFor="full-name" className="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-                                    <input
-                                        type="text"
-                                        id="full-name"
-                                        name="full-name"
-                                        required
-                                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200"
-                                        placeholder="Jane Doe"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200"
-                                        placeholder="name@company.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">Phone Number (Optional)</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200"
-                                        placeholder="+1 555 123 4567"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows={4}
-                                        required
-                                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200"
-                                        placeholder="Tell us about your field service needs..."
-                                    />
-                                </div>
-                                <div className="pt-4">
-                                    <button
-                                        type="submit"
-                                        disabled={submitting}
-                                        className={`w-full group flex items-center justify-center px-8 py-3 rounded-xl font-bold text-base transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 ${
-                                            submitting
-                                                ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                                                : 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:shadow-lg hover:shadow-indigo-500/40 transform hover:-translate-y-0.5'
-                                        }`}
-                                    >
-                                        {submitting ? 'Sending...' : 'Send Message'}
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </section>
-            
-            {/* Map Section */}
-            <section className="bg-gray-950 py-12 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-2xl font-bold text-gray-100 mb-6" data-aos="fade-up">Our Location</h2>
-                    <div className="w-full h-[300px] md:h-[500px] rounded-xl overflow-hidden border-2 border-gray-800 shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-                         {/* Replaced the original map link with a standard Google Maps embed for the Production Office address */}
-                         <iframe 
-                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.292991054924!2d-122.42777328468162!3d37.7770851797585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858097b69a2d21%3A0x1d3a52c1e4c7e6c9!2s2261%20Market%20St%20%2386773%2C%20San%20Francisco%2C%20CA%2094114%2C%20USA!5e0!3m2!1sen!2sin!4v1633596000000!5m2!1sen!2sin"
-                              width="100%" 
-                              height="100%" 
-                              style={{ border: 0 }} 
-                              allowFullScreen="" 
-                              loading="lazy"
-                              referrerPolicy="no-referrer-when-downgrade"
-                              title="Office Location Map"
-                         ></iframe>
-                    </div>
+            </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="bg-gray-950 py-12 px-4">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-100 mb-6" data-aos="fade-up">Our Location</h2>
+                <div className="w-full h-[300px] md:h-[500px] rounded-xl overflow-hidden border-2 border-gray-800 shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    {/* Replaced the original map link with a standard Google Maps embed for the Production Office address */}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.292991054924!2d-122.42777328468162!3d37.7770851797585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858097b69a2d21%3A0x1d3a52c1e4c7e6c9!2s2261%20Market%20St%20%2386773%2C%20San%20Francisco%2C%20CA%2094114%2C%20USA!5e0!3m2!1sen!2sin!4v1633596000000!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Office Location Map" ></iframe>
                 </div>
-            </section>
+            </div>
+        </section>
         </>
     );
 };
 
 // --- Main Component ---
 export default function HomeContent() {
-    
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
-    const [currentDate, setCurrentDate] = useState(''); 
-    const [orbPositions, setOrbPositions] = useState([]);
-    const [isClient, setIsClient] = useState(false);
-    
-    // Initialization and Side Effects
-    useEffect(() => {
-        setIsClient(true);
-        
-        // Dynamically load AOS script and initialize on load
-        const script = document.createElement('script');
-        script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
-        script.onload = () => {
-            if (window.AOS) {
-                window.AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
-            }
-        };
-        document.body.appendChild(script);
+    const [currentDate, setCurrentDate] = useState('');
+    const [orbs, setOrbs] = useState([]);
 
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        setCurrentDate(now.toLocaleDateString('en-US', options)); 
-        setOrbPositions(generateOrbs());
-    
-        const handleMouseMove = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
+    useEffect(() => {
+        // Function to update date and generate orbs on mount
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        setCurrentDate(formattedDate);
+        
+        setOrbs(generateOrbs());
+
+        // Mouse movement for the effect
+        const handleMouseMove = (event) => {
+            setMousePosition({ x: event.clientX, y: event.clientY });
         };
         window.addEventListener('mousemove', handleMouseMove);
-        
+
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
-            // Ensure the script exists before trying to remove it
-            if (document.body.contains(script)) { 
-                document.body.removeChild(script);
-            }
         };
     }, []);
+
+    // Create a ripple effect on the CTA button
+    const createRipple = (event) => {
+        const button = event.currentTarget;
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        button.appendChild(ripple);
+
+        ripple.addEventListener('animationend', () => {
+            ripple.remove();
+        });
+    };
     
-    // Ripple Effect Logic (imperative approach is fine for this simple, self-contained effect)
-    const createRipple = (e) => {
-        const button = e.currentTarget;
-        const diameter = Math.max(button.clientWidth, button.clientHeight);
-        const radius = diameter / 2;
+    // Calculate a slight movement for the orbs based on mouse position
+    const calculateOrbMovement = (orb, index) => {
+        if (typeof window === 'undefined') return {}; // Avoid errors during server-side render
+
+        const movementFactor = 0.05 + (index % 3) * 0.02; // Varying movement speed
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const deltaX = (mousePosition.x - centerX) * movementFactor;
+        const deltaY = (mousePosition.y - centerY) * movementFactor;
         
-        const existingRipple = button.getElementsByClassName("ripple")[0];
-        if (existingRipple) {
-            existingRipple.remove();
-        }
-        
-        const circle = document.createElement("span");
-        circle.style.width = circle.style.height = `${diameter}px`;
-        circle.style.left = `${e.clientX - button.getBoundingClientRect().left - radius}px`;
-        circle.style.top = `${e.clientY - button.getBoundingClientRect().top - radius}px`;
-        circle.classList.add("ripple");
-        
-        button.appendChild(circle);
+        return {
+            transform: `translate(${deltaX}px, ${deltaY}px)`
+        };
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden relative">
-            
-            {/* --- Dynamic Background Effects --- */}
-            <div 
-                className="fixed inset-0 transition-opacity duration-300 pointer-events-none"
-                style={{
-                    background: `radial-gradient(800px at ${mousePosition.x}px ${mousePosition.y}px, rgba(99, 102, 241, 0.15), transparent 80%)`
-                }}
-                aria-hidden="true"
-            ></div>
-            
-            {/* Animated gradient orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-                {isClient && orbPositions.map((orb, i) => (
-                    <div
-                        key={i}
-                        className="absolute rounded-full mix-blend-soft-light filter blur-3xl opacity-20"
-                        style={{
-                            top: orb.top,
-                            left: orb.left,
-                            width: orb.width,
-                            height: orb.height,
-                            background: `linear-gradient(45deg, ${i % 2 === 0 ? '#6366f1' : '#8b5cf6'}, ${i % 2 === 0 ? '#3b82f6' : '#ec4899'})`,
-                            animation: orb.animation,
-                            animationDelay: orb.delay
-                        }}
-                    ></div>
-                ))}
-            </div>
-
-            {/* --- Main Content Container --- */}
-            <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pt-32 sm:pb-12 md:pt-32 md:pb-12"> 
-                <HeroSection 
-                    currentDate={currentDate}
-                    isHovering={isHovering}
-                    setIsHovering={setIsHovering}
-                    createRipple={createRipple}
-                />
-                <FeaturesSection />
-                <WhyChooseFielduoSection />
-                <section id='Pricing'><Pricing /></section>
-                
-                <FielduoVsCompetitorsSection />
-                <section id='About'><AboutFielduoSection /></section>
-                
-                <section id='Contact'><ContactSection /></section>
-                 
-            </main>
-
-            {/* --- Global Styles and Keyframes --- */}
-            <style>{`
-                @import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
-
-                /* Background Orb Keyframes */
+        <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+            {/* Custom CSS for orbs and animations */}
+            <style jsx global>{`
+                /* Keyframes for the orbs */
                 @keyframes pulse1 {
-                    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
-                    50% { transform: translate(30px, -30px) scale(1.1); opacity: 0.3; }
+                    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+                    50% { transform: scale(1.1) translate(10px, -10px); opacity: 0.25; }
                 }
                 @keyframes pulse2 {
-                    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
-                    50% { transform: translate(-40px, 20px) scale(1.05); opacity: 0.25; }
+                    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.2; }
+                    50% { transform: scale(0.9) translate(-5px, 15px); opacity: 0.3; }
                 }
                 @keyframes pulse3 {
-                    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
-                    50% { transform: translate(20px, 40px) scale(1.15); opacity: 0.35; }
+                    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.1; }
+                    50% { transform: scale(1.2) translate(-15px, -5px); opacity: 0.2; }
                 }
-                
-                /* Headline Gradient Keyframes */
-                .animate-gradient {
-                    background-size: 200% auto;
-                    animation: gradient 3s ease infinite;
-                }
-                @keyframes gradient {
+                /* Gradient animation for text */
+                @keyframes gradient-shift {
                     0% { background-position: 0% 50%; }
                     50% { background-position: 100% 50%; }
                     100% { background-position: 0% 50%; }
                 }
-                
-                /* Ripple Effect Keyframes */
+                .animate-gradient {
+                    background-size: 200% auto;
+                    animation: gradient-shift 5s ease-in-out infinite;
+                }
+                /* Ripple effect for CTA */
                 .ripple {
                     position: absolute;
                     border-radius: 50%;
-                    background-color: rgba(255, 255, 255, 0.3);
+                    background: rgba(255, 255, 255, 0.5);
+                    width: 100px;
+                    height: 100px;
+                    margin-top: -50px;
+                    margin-left: -50px;
                     transform: scale(0);
                     animation: ripple-animation 0.6s linear;
                 }
@@ -1295,8 +1150,28 @@ export default function HomeContent() {
                     animation: fade-in-fast 0.3s ease-out forwards;
                 }
             `}</style>
+            
+            {/* --- Decorative Orbs (Parallax Effect) --- */}
+            <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 transition-transform duration-500">
+                {orbs.map((orb, i) => (
+                    <div 
+                        key={i} 
+                        className="absolute rounded-full filter blur-3xl opacity-20 transition-transform duration-300 ease-out"
+                        style={{ ...orb, ...calculateOrbMovement(orb, i), backgroundColor: i % 2 === 0 ? '#6366f1' : '#8b5cf6', background: `radial-gradient(circle at center, ${i % 2 === 0 ? '#6366f1' : '#8b5cf6'}, ${i % 2 === 0 ? '#3b82f6' : '#ec4899'})`, animation: orb.animation, animationDelay: orb.delay }} 
+                    ></div>
+                ))}
+            </div>
+
+            {/* --- Main Content Container --- */}
+            <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pt-32 sm:pb-12 md:pt-32 md:pb-12">
+                <HeroSection currentDate={currentDate} isHovering={isHovering} setIsHovering={setIsHovering} createRipple={createRipple} />
+                <FeaturesSection />
+                <WhyChooseFielduoSection />
+                <section id='Pricing'><Pricing /></section>
+                <FielduoVsCompetitorsSection />
+                <section id='About'><AboutFielduoSection /></section>
+                <ContactUsSection />
+            </main>
         </div>
     );
-
 }
-
